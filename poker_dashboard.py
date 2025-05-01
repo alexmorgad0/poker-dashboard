@@ -9,7 +9,7 @@ st.set_page_config(page_title="Poker Dashboard", layout="wide")
 # --- LOAD DATA ---
 @st.cache_data
 def load_data():
-    df = pd.read_csv('C:/Users/alexm/Downloads/PBT-Bankroll-Export-2025-04-30-05-54-11-UTC.csv', sep=',', skiprows=1)
+    df = pd.read_csv('PBT-Bankroll-Export-2025-04-30-05-54-11-UTC.csv', sep=',', skiprows=1)
     df['starttime'] = pd.to_datetime(df['starttime'])
     df['netprofit_cad'] = df['netprofit'] * df['exchangerate']
     df['session_hours'] = df['playingminutes'] / 60
